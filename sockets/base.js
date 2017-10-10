@@ -15,6 +15,7 @@ module.exports = function (io) {
     socket.broadcast.to(data.id).emit('chat message', data.msg);
   });
 
+
   socket.on('add user', function(data){
     console.log("add user", data.id, data.msg, data.latitude, data.longitude);
 
